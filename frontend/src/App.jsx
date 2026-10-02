@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const modules = ["Dashboard", "Productos", "Categorías", "Proveedores", "Movimientos", "Análisis de demanda", "Predicciones", "Alertas"];
 
@@ -17,3 +17,4 @@ export default function App() {
     </main>
   </div>;
 }
+
