@@ -19,12 +19,16 @@ Sistema inteligente de gestión de inventarios y demanda.
 Node.js 20+ y npm; Python 3.11+; Docker Desktop (opcional, para PostgreSQL); Git.
 
 ## Inicio rápido
-1. Base de datos opcional: `docker compose up -d db`
-2. API: `cd backend`, crear entorno virtual (`python -m venv .venv`), activarlo, instalar `pip install -r requirements.txt` y ejecutar `uvicorn app.main:app --reload`.
-3. Interfaz: `cd frontend`, ejecutar `npm install` y `npm run dev`.
-4. API docs: <http://127.0.0.1:8000/docs>; frontend: <http://localhost:5173>.
+1. API: `cd backend`, crear entorno virtual (`python -m venv .venv`), activarlo, instalar `pip install -r requirements.txt` y ejecutar `uvicorn app.main:app --reload`.
+2. Interfaz: en otra terminal, `cd frontend`, ejecutar `npm install` y `npm run dev`.
+3. API docs: <http://127.0.0.1:8000/docs>; frontend: <http://localhost:5173>.
 
-En este punto se entrega el esqueleto de inicio. Los módulos funcionales y la conexión real con PostgreSQL son trabajo de las siguientes etapas.
+La primera versión guarda productos en SQLite (`backend/smartstock.db`) para facilitar la demostración local. Se puede configurar otra URL de SQLAlchemy mediante `DATABASE_URL` cuando se conecte PostgreSQL.
+
+## Pruebas básicas de la API
+Desde `backend` y con el entorno virtual activo: `pytest`.
+
+El módulo Productos ya permite registrar, buscar, editar y eliminar productos mediante la API. Dashboard y los otros módulos continúan como estructura inicial para las siguientes etapas.
 
 ## Git remoto
 El repositorio local está inicializado. Para enlazarlo a GitHub/GitLab cuando esté creado:
